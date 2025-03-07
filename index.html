@@ -5,28 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JewItUp</title>
     <link rel="stylesheet" href="https://use.typekit.net/lng6tek.css" />
-    <style>
-      body {
-        background: linear-gradient(90deg, #fba025, #f47b25);
-      }
-      body,
-      h2,
-      p {
-        color: #5e0830;
-        font-family: "proxima-nova", sans-serif;
-      }
-      #purim-promo {
-        text-align: center;
-        max-width: 650px;
-        margin: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
   </head>
   <body>
     <div id="purim-promo">
-      <img src="./assets/img/One_Chabad_Logo_Black.png" />
-      <h2>There’s a lot more to Purim than “Pour ‘em.”</h2>
-
+      <img id="lead-favicon" src="./assets/img/favicon.png" />
+      <h2>There’s a lot<br> more to Purim<br> than “Pour ‘em.”</h2>
+      <img id="drink-icon" src="./assets/img/drink-icon.png" />
       <p>
         Sure, you’ll pour a few L’Chaims. And make lots of noise. And wear silly
         masks. But with antisemitism skyrocketing, the story of Purim is more
@@ -37,16 +23,14 @@
 
     </div>
     <div id="home-ctas">
-      <!-- Find your local celebration 
-      Learn more about Purim 
-      Find your local Chabad Lubavitch-Center
-       -->
-      <a href="https://www.chabad.org/centers/default_cdo/city/Philadelphia/state/Pennsylvania/country/USA" style="background-color: #5e0830; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px;">Find your local celebration</a>
-      <a href="https://www.chabad.org/holidays/purim/default_cdo/jewish/Purim.htm" style="background-color: #5e0830; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px;">Learn more about Purim</a>
-      <a href="https://www.chabad.org/centers/default_cdo/city/Philadelphia/state/Pennsylvania/country/USA" style="background-color: #5e0830; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px;">Find your local Chabad Lubavitch-Center</a>
+      <a href="/purim-celebrations" class="cta-button">Find your local celebration</a>
+      <a href="/about-purim" class="cta-button">Learn more about Purim</a>
+      <a href="https://www.chabadpa.org/centers" target="_blank" class="cta-button">Find your local Chabad Lubavitch-Center</a>
     </div>
-    <p>The city-wide Purim Campaign is Sponsored by the Philadelphia Lubavitcher Center 
-      with funding by a grant from the Jewish Federation of Greater Philadelphia.
-      </p>
+    <footer>
+      <p>The city-wide Purim Campaign is sponsored by the <a href="https://www.chabadpa.org/" target="_blank">Philadelphia Lubavitcher Center</a> 
+        with funding by a grant from the Jewish Federation of Greater Philadelphia.
+        </p>
+    </footer>
   </body>
 </html>

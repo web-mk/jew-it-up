@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(90deg, #fba025, #f47b25);
+  padding: 20px;
+}
+
+body,
+h2,
+p {
+  color: #5e0830;
+  font-family: "proxima-nova", sans-serif;
+}
+
+#purim-promo h2 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+#lead-favicon {
+  width: 40px;
+  margin-top: 70px;
+}
+#drink-icon {
+  height: 180px;
+}
+
+#purim-promo {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+}
+
+#purim-promo p {
+  font-size: 24px;
+}
+
+.cta-button {
+  font-size: 24px;
+  background-color: #5e0830; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px
+}
+
+#home-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 750px;
+  margin: 60px auto 20px;
+  align-items: initial;
+  justify-content: center;
+}
+
+#home-ctas a {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 650px) {
+  #purim-promo h2 {
+    font-size: 50px;
+  }
+
+  #home-ctas a {
+    display: block;
+    flex: 1 100%;
+    text-align: center;
+  }
+}
+
+footer {
+  margin: 60px 20px 40px 20px;
+  font-size: 18px;
+  text-align: center;
+}
