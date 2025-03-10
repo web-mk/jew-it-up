@@ -1,0 +1,110 @@
+#lead-img {
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+a.map-link {
+  text-decoration: none;
+  color: #5e0831;
+  border-bottom: dotted 1px #db6b19;
+}
+
+#dynamic-content h4 {
+  font-size: 20px;
+  /* padding-left: 35px; */
+}
+
+.single-event p {
+  margin-bottom: 0px;
+}
+
+#filter-bar {
+  max-width: 900px;
+  margin: auto;
+  align-items: center;
+}
+
+select {
+  background: transparent;
+}
+
+#events-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+}
+
+.single-event {
+  flex: 1 30%;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-position: left 20px;
+}
+
+/* .single-event[data-type="megilla-reading"] {
+  background-image: url(https://webmk.co/sites/chabad-pa/gragger-icon.png);
+}
+
+.single-event[data-type="hamantash-bake"] {
+  background-image: url(https://webmk.co/sites/chabad-pa/hamantash-icon.png);
+}
+
+.single-event[data-type="party"],
+.single-event[data-type="meal-seuda"],
+.single-event[data-type="carnival"] {
+  background-image: url(https://webmk.co/sites/chabad-pa/mask-icon.png);
+} */
+
+#filter-bar {
+  display: flex ;
+  flex-wrap: wrap;
+}
+
+#filter-bar select {
+  font-family: 'proxima-nova';
+  border-radius: 4px;
+  border: 1px solid #d7d2d2;
+  width: 110px;
+}
+
+.filter {
+  margin: 0 7px;
+}
+
+@media (max-width: 768px) {
+  .single-event {
+    flex: 1 100%;
+  }
+
+  #filter-bar {
+    display: block;
+  }
+}
+
+
+#dynamic-content h4 {
+  font-size: 25px;
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+a.button {
+  background-color: #f47b25;
+  color: #fff;
+  padding: 5px 15px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 4px;
+  transition: background-color .3s;
+}
+
+a.button:hover {
+  background-color: #5e0830;
+}
