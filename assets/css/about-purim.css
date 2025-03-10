@@ -7,6 +7,16 @@
   font-size: 19px;
 }
 
+img#lead-img {
+  max-width: 300px;
+  margin: auto;
+  display: block;
+}
+
+h2 {
+  text-align: center;
+}
+
 h3 {
   font-size: 21px;
 }
