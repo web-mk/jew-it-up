@@ -72,3 +72,22 @@ footer {
   font-size: 18px;
   text-align: center;
 }
+
+#home-button {
+  text-align: center;
+  margin: 40px;
+}
+
+#home-button a {
+  border: 1px solid #5e0830;
+  color: #5e0830;
+  padding: 5px 20px 10px;
+  border-radius: 110px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.4s;
+}
+#home-button a:hover {
+  background-color: #5e0830;
+  color: white;
+}
