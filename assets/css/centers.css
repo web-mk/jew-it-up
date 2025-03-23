@@ -1,0 +1,43 @@
+.main-office {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  font-size: 23px;
+  margin-bottom: 0;
+}
+
+.main-office p {
+  margin: 0 0 50px;
+}
+
+#dynamic-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  gap: 20px;
+}
+
+.chabad-center {
+  flex: 1 calc(33% - 10px);
+  margin-bottom: 30px;
+}
+
+.chabad-center a {
+  color: inherit;
+}
+
+@media (max-width: 650px) {
+  .chabad-center {
+    flex: 1 100%;
+  }
+}
+
+.center-name {
+  font-weight: bold;
+}
