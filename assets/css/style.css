@@ -10,39 +10,84 @@ p {
   font-family: "proxima-nova", sans-serif;
 }
 
-#purim-promo h2 {
-  font-size: 60px;
+#home-promo h2 {
+  font-size: 40px;
   line-height: 1;
+  font-weight: normal;
 }
 
-#lead-favicon {
-  width: 40px;
-  margin-top: 70px;
+#home-promo h2 span {
+  font-size: 60px;
+  font-weight: bold;
 }
+
+.options {
+  display: flex;
+  gap: 80px;
+}
+
+@media (max-width: 650px) {
+  .options {
+    flex-direction: column;
+  }
+}
+
+.celebration-option {
+  flex: 1;
+}
+
+.celebration-option img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.celebration-option h3 {
+  font-size: 30px;
+}
+
+.celebration-option h3  span {
+  display: block;
+  font-size: 22px;
+}
+
 #drink-icon {
   height: 180px;
+  margin-top: 80px;
 }
 
-#purim-promo {
+#home-promo {
   text-align: center;
-  max-width: 820px;
+  max-width: 80vw;
   margin: auto;
 }
 
-#purim-promo p {
+#home-promo p {
   font-size: 24px;
 }
 
 .cta-button {
   font-size: 24px;
-  background-color: #5e0830; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px
+  background-color: #5e0830;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
 }
 
-#home-ctas {
+#home-alt-ctas .cta-button {
+  background-color: transparent;
+  font-size: 19px;
+  border: 1px solid #5e0830;
+  color: #5e0830;
+}
+
+#home-alt-ctas {
   display: flex;
   flex-wrap: wrap;
   max-width: 750px;
-  margin: 60px auto 20px;
+  margin: 140px auto 20px;
   align-items: initial;
   justify-content: center;
 }
@@ -52,18 +97,19 @@ p {
 }
 
 @media (max-width: 650px) {
-  #purim-promo h2 {
+  #home-promo h2 {
     font-size: 50px;
   }
 
-  #purim-promo h2 br {
+  #home-promo h2 br {
     display: none;
   }
 
-  #home-ctas a {
+  #home-alt-ctas a {
     display: block;
     flex: 1 100%;
     text-align: center;
+    margin-bottom: 10px;
   }
 }
 
