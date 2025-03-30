@@ -26,6 +26,7 @@ p {
   display: flex;
   gap: 80px;
   max-width: 1200px;
+  margin: auto;
 }
 
 @media (max-width: 650px) {
