@@ -14,7 +14,7 @@ const loadDonorData = async () => {
 
 let container;
 
-const addCenter = ([centerName, staff, web, email, phone]) => {
+const addCenter = ([centerName, staff, county, web, email, phone]) => {
   const center = document.createElement("div");
   center.classList.add("chabad-center");
   let centerHtml = `
