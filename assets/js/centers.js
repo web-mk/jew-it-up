@@ -1,5 +1,6 @@
 const LAMBDA = 'https://us-central1-torah-campaigns.cloudfunctions.net/donor-tally';
 const SHEET_ID = '1fLSxHrUYrZi10kNYnSNBm51KlDX7r7zTjmJgC_Cpugs';
+const areas = []; 
 
 const loadDonorData = async () => {
   const url = `${LAMBDA}?id=${SHEET_ID}`;
@@ -12,14 +13,54 @@ const loadDonorData = async () => {
   }
 }
 
+
+let selectedArea = 'all';
+
+const filterEvents = () => {
+  const centers = document.querySelectorAll('.chabad-center');
+  centers.forEach((center) => {
+    const areaMatch = selectedArea === 'all' || center.dataset.area === selectedArea;
+
+    if (areaMatch) {
+      center.style.display = 'block';
+    } else {
+      center.style.display = 'none';
+    }
+  });
+};
+
+const filterChangeHandler = (event) => {
+  const id = event.target.id;
+  const value = event.target.value;
+  if (id === 'area') {
+    selectedArea = value;
+  } else if (id === 'demographic') {
+    selectedDemographic = value;
+  } else if (id === 'type') {
+    selectedType = formatType(value);
+  } else if (id === 'date') {
+    selectedDate = value;
+  }
+  filterEvents();
+};
+
 let container;
+
+const formatArea = (area) => {
+  return area?.toLowerCase().replace(/\s/g, "-");
+}
 
 const addCenter = ([centerName, staff, county, web, email, phone]) => {
   const center = document.createElement("div");
   center.classList.add("chabad-center");
+  center.dataset.area = formatArea(county);
   let centerHtml = `
     <div class="center-name">${centerName}</div>
   `;
+
+  if (!areas.includes(county)) {
+    areas.push(county);
+  }
 
   if (staff) {
     centerHtml += `<div class="center-staff">${staff.replace(/;/g, '<br>')}</div>`;
@@ -46,6 +87,20 @@ const addCenter = ([centerName, staff, county, web, email, phone]) => {
   container.appendChild(center);
 };
 
+const addFilterBar = () => {
+  const filterBar = document.querySelector('#filter-bar');
+  filterBar.innerHTML = ` 
+    <div class="filter">  
+      <label for="area">County:</label>
+      <select id="area">  
+        <option value="all">All</option>
+        ${areas.sort().map((area) => `<option value="${formatArea(area)}">${area}</option>`)
+          .join('')}
+      </select>
+    </div>
+  `;
+  document.querySelector('#area').addEventListener('change', filterChangeHandler);
+};
 
 const init = async () => {
   container = document.querySelector("#dynamic-content");
@@ -59,6 +114,7 @@ const init = async () => {
     if (index === 0) return; // Skip header row
     addCenter(row);
   });
+  addFilterBar();
 };
 
 if (document.readyState !== "loading") {
