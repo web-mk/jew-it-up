@@ -31,6 +31,10 @@ p {
   font-weight: bold;
 }
 
+#home-promo img {
+  max-width: 100%;
+}
+
 .options {
   display: flex;
   gap: 80px;
